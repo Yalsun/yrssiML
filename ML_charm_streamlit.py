@@ -27,7 +27,7 @@ if st.button("Submit"):
     #clf = joblib.load("D:/Material/new/ML compare Yxiu/clfSSSIcatboost.pkl")
     clf = joblib.load('other data/clfSSSIcatboost.pkl')
     import pickle
-    with open('dfXstandardization_params.pkl', 'rb') as f:
+    with open('other data/dfXstandardization_params.pkl', 'rb') as f:
             loaded_dfXstandardization_params = pickle.load(f)
     # Store inputs into dataframe
     X = pd.DataFrame([[Age, DB, NIHSS,SHR,pSSSI]],
