@@ -25,9 +25,10 @@ pSSSI = st.number_input("Enter pSSSI(0=dSSSI,1=pSSSI)",0,1)
 if st.button("Submit"):
     # Unpickle classifier
     clf = joblib.load("other data/clfSSSIcatboost.pkl")
-    import pickle
-    with open('other data/dfXstandardization_params.pkl', 'rb') as f:
-            loaded_dfXstandardization_params = pickle.load(f)
+    loaded_dfXstandardization_params = joblib.load('other data/dfXstandardization_params.pkl')
+    #import pickle
+    #with open('other data/dfXstandardization_params.pkl', 'rb') as f:
+            #loaded_dfXstandardization_params = pickle.load(f)
     # Store inputs into dataframe
     X = pd.DataFrame([[Age, DB, NIHSS,SHR,pSSSI]],
                      columns=["Age", "DB", "NIHSS","SHR","pSSSI"])
