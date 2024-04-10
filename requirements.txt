@@ -1,4 +1,4 @@
 ﻿joblib >= 1.1.0
 streamlit == 1.32.2
 pandas == 1.4.4
-catBoost == 1.2.3
+catboost == 1.2.3
