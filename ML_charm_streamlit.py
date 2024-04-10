@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import numpy as np
-
 
 # Title
 st.title("3-month functional outcome prediction of SSSI patients")
@@ -56,5 +54,5 @@ if st.button("Submit"):
         output = "unfavourable functional outcome"  # 如果结果不等于目标值，则输出其他值
 
     print(output)  # 打印输出值
-    st.markdown(f"This prediction of three month outcome is {output}")
+    st.subheader(f"This prediction of three month outcome is {output}")
 
