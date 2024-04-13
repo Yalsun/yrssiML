@@ -1,4 +1,0 @@
-﻿catboost == 1.2.3
-joblib == 1.3.2
-pandas == 1.4.4
-streamlit == 1.32.2
