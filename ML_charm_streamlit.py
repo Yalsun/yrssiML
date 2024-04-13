@@ -15,7 +15,7 @@ Age = st.number_input("Enter Age(years)",18,)
 DB = st.number_input("Enter Diabetes(0=no,1=yes)",0,1)
 NIHSS = st.number_input("Enter NIHSS(scores)",0,42)
 SHR = st.number_input("Enter stress-induced hyperglycemia ratio")
-pSSSI = st.number_input("Enter lesion location（0=distal SSSI,1=proximal SSSI）",0,1)
+pSSSI = st.number_input("Enter lesion location(0=distal SSSI,1=proximal SSSI)",0,1)
 # Dropdown input
 #eyes = st.selectbox("Select Eye Colour", ("Blue", "Brown"))
 
