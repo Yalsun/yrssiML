@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Title
-st.title("3-month functional outcome prediction of SSSI patients")
+st.title("3-month functional outcome prediction of RSSI patients")
 
 st.subheader("Prediction(obtain after inputting parameters)")
 
