@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Title
-st.title("3-month functional outcome prediction of SSSI patients")
+st.title("3-month functional outcome prediction of RSSI patients")
 
 st.subheader("Prediction(obtain after inputting parameters)")
 
@@ -15,7 +15,7 @@ Age = st.number_input("Enter Age(years)",18,)
 DB = st.number_input("Enter Diabetes(0=no,1=yes)",0,1)
 NIHSS = st.number_input("Enter NIHSS(scores)",0,42)
 SHR = st.number_input("Enter stress-induced hyperglycemia ratio")
-pSSSI = st.number_input("Enter lesion location(0=distal SSSI,1=proximal SSSI)",0,1)
+pRSSI = st.number_input("Enter lesion location(0=distal RSSI,1=proximal RSSI)",0,1)
 # Dropdown input
 #eyes = st.selectbox("Select Eye Colour", ("Blue", "Brown"))
 
@@ -31,8 +31,8 @@ if st.button("Submit"):
     with open('dfXstandardization_params.pkl', 'rb') as f:
         loaded_dfXstandardization_params = pickle.load(f)
     # Store inputs into dataframe
-    X = pd.DataFrame([[Age, DB, NIHSS,SHR,pSSSI]],
-                     columns=["Age", "DB", "NIHSS","SHR","pSSSI"])
+    X = pd.DataFrame([[Age, DB, NIHSS,SHR,pRSSI]],
+                     columns=["Age", "DB", "NIHSS","SHR","pRSSI"])
     #X = X.replace(["Brown", "Blue"], [1, 0])
     standardized_X_new = X.copy()
     for column in X.columns:
